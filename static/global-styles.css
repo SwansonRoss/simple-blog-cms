@@ -1,0 +1,114 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.global--header{
+    width: max-content;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+.global--options-container{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/*These styles control the title in the header section of the blog*/
+.global--title{
+    font-size: 34px;
+    padding-bottom: .5rem;
+}
+.global--header-link{
+    color: lightcoral;
+    text-decoration: none;
+}
+.global--header-link:visited{
+    color: lightcoral;
+    text-decoration: none;
+}
+.global--header-link:hover{
+    font-size: 35px;
+}
+
+/*These styles control the tag line in the header section of the blog*/
+.global--tag-line{
+    font-size: 18px;
+    padding-bottom: .5rem;
+}
+
+/*These styles control the author text in the header section of the blog*/
+.global--author{
+    font-size: 14px;
+}
+
+/*These styles control the main section of the blog 
+- this contains the about section and the content section*/
+.global--body-container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*These styles control the about section of the blog*/
+.global--about-container{
+    margin: 0 1rem;
+    padding: 1rem 0;
+    border-right: 2px solid lightcoral;
+}
+
+/*These styles control the div where the author image is housed*/
+.global--author-image-container{
+    text-align: center;
+    margin: auto;
+}
+
+/*These styles control the author image itself*/
+.global--author-image{
+    width: 150px;
+    border-radius: 75px;
+}
+
+/*These styles control the about copy*/
+.global--about-paragraph{
+    font-style: italic;
+    padding-bottom: .5rem;
+}
+
+/* The following styles controll the post-list section of the home page*/
+.global--preview-container{
+    display: grid; 
+    grid-template-columns: 25% 75%;
+    padding-top: .5rem;
+    margin-bottom: 1.5rem;
+    border-top: 2px solid lightcoral;
+}
+.global--preview-img-container{
+    display: inline;
+}
+.global--preview-text-container{
+    padding: 0 1rem;
+}
+.global--preview-title{
+    font-size: 24px;
+    text-decoration: none;
+    margin: 0;
+    color: black;
+}
+.global--preview-title:visited {
+    color: black;
+    text-decoration: none;
+}
+.global--preview-title:hover {
+    text-decoration: underline;
+}
+.global--preview-date{
+    margin-top: 0;
+    font-size: 14px;
+    font-style: italic;
+}
+.global--preview-copy{
+    font-size: 18px;
+    padding-bottom: 1rem;
+}
+

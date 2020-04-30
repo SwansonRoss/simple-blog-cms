@@ -1,0 +1,15 @@
+{% extends "template-parts/base.html" %}
+
+{% block additionalStyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='post-styles.css') }}" type="text/css">
+{% endblock %}
+
+{% block headerContent %}
+    {% include "template-parts/header.html" %}
+{% endblock %}
+
+{% block bodyContent %}
+<section>
+    {% include "template-parts/post_body.html" %}
+</section>
+{% endblock %}

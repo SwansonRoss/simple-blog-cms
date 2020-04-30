@@ -1,0 +1,44 @@
+.post--container{
+    padding: 0 2rem;
+}
+.post--headline-container {
+    margin: 0;
+}
+.post--headline {
+    font-size: 32px;
+}
+.post--subhead-container {
+    margin: 0;
+}
+.post--subhead {
+    font-size: 24px;
+    color: lightcoral;
+}
+.post--publish-date-container{
+    margin: 0;
+}
+.post--publish-date{
+    font-size: 14px;
+}
+.post--hero-image-container{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.post--hero-image{
+    width: 300px;
+}
+.post--paragraph-container {
+    padding: 0 2rem;
+}
+.post--paragraph {
+    font-size: 18px;
+    padding-bottom: 1rem;
+}
+.post--approve-container{
+    text-align: center;
+    padding-top: 5rem;
+}
+.post--approve{
+    font-size: 24px;
+}

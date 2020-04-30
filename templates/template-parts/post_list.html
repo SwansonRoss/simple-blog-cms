@@ -1,0 +1,43 @@
+{% for post in posts %}
+{% if loop.index > startIndex and loop.index <= endIndex %}
+<div class="global--preview-container">
+    <div class="global--preview-img-container">
+        <img width="100%" src="{{post['imageSrc']}}"/>
+    </div>
+    <div class="global--preview-text-container">
+        <div>
+            <a class="global--preview-title" href="post/{{ post['slug'] }}"><h1 class="global--preview-title">{{ post["title"] }}</h1></a>
+        </div>
+        <div>
+            <p class="global--preview-date">{{ post["date"]}}</p>
+        </div>
+        <div class="global--preview-copy">
+            {{ post["preview"]}}
+        </div>
+        {% if loggedIn %}
+        <div>
+            <div>
+                <a href="{{ url_for('deletePost', slug=post['slug'], index=loop.index-1) }}">Delete</a>
+                <a href="{{ url_for('editPost', slug=post['slug'], index=loop.index-1) }}">Edit</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% if totalPages > 1 %}
+    {% if pageNum == 1 %}
+    <div>
+        <a href={{url_for('index', pageNum=pageNum+1)}}>&raquo;</a>
+    </div>
+    {% elif pageNum == totalPages %}
+    <div>
+        <a href={{url_for('index', pageNum=pageNum-1)}}>&laquo;</a>
+    </div>
+    {% else %}
+    <div>
+        <a href={{url_for('index', pageNum=pageNum-1)}}>&laquo;</a> <a href={{url_for('index', pageNum=pageNum+1)}}>&raquo;</a>
+    </div>
+    {% endif %}
+{% endif %}

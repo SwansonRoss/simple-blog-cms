@@ -1,0 +1,15 @@
+<header class="global--header">
+    {% if meta %}
+        <div class="global--title">
+            <a class="global--header-link" href="{{ url_for('index') }}">{{ meta["title"] }}</a>
+        </div>
+        <div class="global--tag-line">
+            {{ meta["tagLine"] }}
+        </div>
+        {% if meta["author"] %}
+        <div class="global--author">
+            By {{ meta["author"] }}
+        </div>
+        {% endif %}
+    {% endif %}
+</header>

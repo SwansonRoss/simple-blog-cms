@@ -1,0 +1,33 @@
+{% extends "template-parts/base.html" %}
+
+{% block additionalStyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-styles.css') }}" type="text/css">
+{% endblock %}
+
+{% block headerContent %}
+    {% include "template-parts/header.html" %}
+{% endblock %}
+
+{% block containerClass %}
+{% endblock %}
+
+{% block aboutSection %}
+{% endblock %}
+
+{% block bodyContent %}
+<section class="form--container">
+    {% if errorMessage %}
+    <div>
+        <div>{{ errorMessage }}</div>
+    </div>
+    {% endif %}
+    {% from "_formhelpers.html" import render_field %}
+    <form method=post action="{{ url_for('approveEdit', slug=slug, index=index)}}">
+        {% include "forms/post-form.html" %}
+        <div class="button-container">
+            <input class="button" id="submit-button" type=submit value='Preview Post' name='submit_button'>
+        </div>
+    </form>
+</section>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends "template-parts/base.html" %}
+
+{% block additionalStyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='form-styles.css') }}" type="text/css">
+{% endblock %}
+
+{% block headerContent %}
+    {% include "template-parts/header.html" %}
+{% endblock %}
+
+{% block containerClass %}
+{% endblock %}
+
+{% block aboutSection %}
+{% endblock %}
+
+{% block bodyContent %}
+<section class="form--container">
+    {% if errorMessage %}
+    <div>
+        <div>{{ errorMessage }}</div>
+    </div>
+    {% endif %}
+    {% from "_formhelpers.html" import render_field %}
+    {% include "forms/site-info-form.html" %}
+</section>
+{% endblock %}
+

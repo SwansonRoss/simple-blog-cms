@@ -1,0 +1,23 @@
+{% extends "template-parts/base.html" %}
+
+{% block additionalStyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='home-styles.css') }}" type="text/css">
+{% endblock %}
+
+{% block headerContent %}
+    {% include "template-parts/header.html" %}
+    {% if loggedIn %}
+    <div class="global--options-container">
+        <a href="{{ url_for('newPost') }}">Add New Post</a>
+        <a href="{{ url_for('logOut') }}">Log out</a>
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block bodyContent %}
+    <section>
+        {% if loggedIn %}
+    {% endif %}
+        {% include "template-parts/post_list.html" %}
+    </section>
+{% endblock %}

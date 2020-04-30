@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - {{ meta['title']}}</title>
+        {% else %}
+        <title>{{ meta['title']}}</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='global-styles.css') }}" type="text/css">
+        {% block additionalStyles %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="global--header-container">
+            {% block headerContent %}
+            {% endblock %}
+        </header>
+
+        <section {% block containerClass %} class="global--body-container" {% endblock %}>
+            {% block aboutSection %}
+            <section class="global--about-container">
+                <div class="global--author-image-container">
+                    <img class="global--author-image" src="{{ meta['authorImage'] }}" />
+                </div>
+                {% if meta['about'] %}
+                {% for c in meta['about'] %}
+                    {% if c['codeBlock'] %}
+                    <div class="global--about-paragraph">
+                        {{ c['codeBlock']|safe }}
+                    </div>
+                    {% endif %}
+                    {% if c['block'] %}
+                    <div class="global--about-paragraph">
+                        {{ c['block'] }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% if loggedIn %}
+                    <a href={{ url_for('setUp') }}>Edit Settings</a>
+                {% endif %}
+            </section>
+            {% endblock %}
+            {% block bodyContent %}
+            {% endblock %}
+        </section>
+
+        <footer class="global--footer-container">
+            {% block footerContent %}
+            {% endblock %}
+        </footer>
+    </body>
+</html>

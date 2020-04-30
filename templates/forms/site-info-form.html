@@ -1,0 +1,49 @@
+<form method="POST" action="{{ url_for('setUp') }}">
+<div>
+    <div>
+        {{ form.title.label(class="form--label") }}:
+    </div>
+    <div>
+        {{ form.title(class="form--text-field") }}
+    </div>
+</div>
+<div>
+    <div>
+        {{ form.tagLine.label(class="form--label") }}:
+    </div>
+    <div>
+        {{ form.tagLine(class="form--text-field") }}
+    </div>
+</div>
+<div>
+    <div>
+        {{ form.about.label(class="form--label") }}:
+    </div>
+    <div>
+        {{ form.about(class="form--about form--text-field") }}
+    </div>
+</div>
+<div>
+    <p class="form--hint">Hint: You can add links link this: [Add link text between brackets](putURLbetweenParentheses)</p>
+    <p class="form--hint">Links may not show up in the preview</p>
+</div>
+<div>
+    <div>
+        {{ form.author.label(class="form--label") }}:
+    </div>
+    <div>
+        {{ form.author(class="form--text-field") }}
+    </div>
+</div>
+<div>
+    <div>
+        {{ form.authorImage.label(class="form--label") }}:
+    </div>
+    <div>
+        {{ form.authorImage(class="form--text-field") }}
+    </div>
+</div>
+<div class="button-container">
+    <input class="button" id="submit-button" type=submit value='Update' name='submit_button'>
+</div>
+</form>

@@ -1,0 +1,10 @@
+<head>
+    {% if title %}
+    <title>{{ title }} - {{ meta['title']}}</title>
+    {% else %}
+    <title>{{ meta['title']}}</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='global-styles.css') }}" type="text/css">
+    {% block additionalStyles %}
+    {% endblock %}
+</head>

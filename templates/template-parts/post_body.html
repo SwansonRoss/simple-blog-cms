@@ -1,0 +1,42 @@
+{% if post %}
+    {% set title = post.title %}
+    {% set subhead = post.subhead %}
+    {% set date = post.date %}
+    {% set image = post.imageSrc %}
+{% endif %}
+<article class="post--container">
+    <div class="post--headline-container">
+        <h1 class="post--headline">{{ title }}</h1>
+    </div>
+    <div class="post--subhead-container">
+        <h2 class="post--subhead">{{ subhead }}</h2>
+    </div>
+    <div class="post--publish-date-container">
+        <p class="post--publish-date">{{ date }}</p>
+    </div>
+    <div class="post--hero-image-container">
+        <img class="post--hero-image" src="{{ image}}">
+    </div>
+    <div class="post--paragraph-container">
+        {%if post %}
+            {% for c in post.copy %}
+            <div class="post--paragraph">
+                {{ c }}
+            </div>
+            {% endfor %}
+        {% else %}
+            {% for c in copy %}
+                {% if c['codeBlock'] %}
+                <div class="post--paragraph">
+                    {{ c['codeBlock']|safe }}
+                </div>
+                {% endif %}
+                {% if c['block'] %}
+                <div class="post--paragraph">
+                    {{ c['block'] }}
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</article>

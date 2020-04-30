@@ -1,0 +1,40 @@
+.form--container{
+    width: 80%;
+    margin: auto;
+    background-color: #f1f1f1;
+    padding: 1.5rem 2rem;
+}
+.form--label{
+    font-size: 1rem;
+}
+.form--text-field{
+    width: 100%;
+    margin: auto;
+}
+.form--preview{
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form--body{
+    height: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form--about{
+    height: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form--container2{
+    width: 40%;
+    margin: auto;
+    background-color: #f1f1f1;
+    padding: 1.5rem 2rem;
+}
+.form--set-unpw{
+    width: 100%;
+    margin: auto;
+}
+.form--hint{
+    font-style: italic;
+    font-size: .9rem;
+    margin: .5rem;
+}

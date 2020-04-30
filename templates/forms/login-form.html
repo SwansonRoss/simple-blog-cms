@@ -1,0 +1,21 @@
+<form method="POST" action="{{ url_for('login') }}">
+    <div>
+        <div>
+            {{ form.username.label(class="form--label") }}:
+        </div>
+        <div>
+            {{ form.username(class="form--text-field") }}
+        </div>
+    </div>
+    <div>
+        <div>
+            {{ form.password.label(class="form--label") }}:
+        </div>
+        <div>
+            {{ form.password(class="form--text-field") }}
+        </div>
+    </div>
+    <div class="button-container">
+        <input class="button" id="submit-button" type=submit value='Log in' name='submit_button'>
+    </div>
+</form>
