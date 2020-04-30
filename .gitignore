@@ -26,3 +26,6 @@ pip-delete-this-directory.txt
 
 # Data
 data/
+data/blog_info.json
+data/post_metadata.json
+data/posts.json
